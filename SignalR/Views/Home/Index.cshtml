@@ -31,6 +31,7 @@
             });
         });
         function getAllMessages() {
+            console.log("here!")
             var tbl = $('#messagesTable');
             $.ajax({
                 url: '/Home/GetMessages',
@@ -38,13 +39,21 @@
                 type: 'GET',
                 dataType: 'html',
                 success: function (result) {
-                    console.log(result);
+                    //console.log(result);
                     var a2 = JSON.parse(result);
                     tbl.empty();
                     var i = 1;
                     $.each(a2, function (key, value) {
-                        tbl.append('<tr>' + '<td>' + i + '</td>' + '<td>' + value.empName + '</td>' + '<td>' + value.Salary + '</td>' + '<td>' + value.DeptName + '</td>' + '<td>' + value.Designation + '</td>' +'</tr>');
-                        i = i + 1;
+                        tbl.append('<tr>' + '<td>' + value.MaCP + '</td>' + '<td>' + value.GiaMua3 + '</td>' + '<td>' + value.SoLuongMua3 + '</td>'
+                            + '<td>' + value.GiaMua2 + '</td>' + '<td>' + value.SoLuongMua2 + '</td>'
+                            + '<td>' + value.GiaMua1 + '</td>' + '<td>' + value.SoLuongMua1 + '</td>'
+                            + '<td>' + value.GiaKhop + '</td>' + '<td>' + value.SoLuongKhop + '</td>'
+                            + '<td>' + value.GiaBan1 + '</td>' + '<td>' + value.SoLuongBan1 + '</td>'
+                            + '<td>' + value.GiaBan2 + '</td>' + '<td>' + value.SoLuongBan2 + '</td>'
+                            + '<td>' + value.GiaBan3 + '</td>' + '<td>' + value.SoLuongBan3 + '</td>'
+                            + '<td>' + value.TongSo + '</td>'
+                            + '</tr>');
+                       
                     });
                 }
             });
@@ -66,11 +75,22 @@
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Id</th>
-                                        <th>Name</th>
-                                        <th>Salary</th>
-                                        <th>Department</th>
-                                        <th>Designation</th>
+                                        <th>Mã Cổ Phiếu</th>
+                                        <th>Giá Mua 3</th>
+                                        <th>Số Lượng Mua 3</th>
+                                        <th>Giá Mua 2</th>
+                                        <th>Số Lượng Mua 2</th>
+                                        <th>Giá Mua 1</th>
+                                        <th>Số Lượng Mua 1</th>
+                                        <th>Giá Khớp</th>
+                                        <th>Số Lượng Khớp</th>
+                                        <th>Giá Bán 1</th>
+                                        <th>Số Lượng Bán 1</th>
+                                        <th>Giá Bán 2</th>
+                                        <th>Số Lượng Bán 2</th>
+                                        <th>Giá Bán 3</th>
+                                        <th>Số Lượng Bán 3</th>
+                                        <th>Tổng số</th>
                                     </tr>
                                 </thead>
                                 <tbody id="messagesTable"></tbody>

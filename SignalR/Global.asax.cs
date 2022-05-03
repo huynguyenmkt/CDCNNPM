@@ -19,8 +19,13 @@ namespace SignalR
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            SqlDependency.Stop(connString);
             SqlDependency.Start(connString);
            
+        }
+        protected void Application_End()
+        {
+            SqlDependency.Stop(connString);
         }
     }
 }
