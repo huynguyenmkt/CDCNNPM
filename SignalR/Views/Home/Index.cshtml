@@ -44,14 +44,14 @@
                     tbl.empty();
                     var i = 1;
                     $.each(a2, function (key, value) {
-                        tbl.append('<tr>' + '<td>' + value.MaCP + '</td>' + '<td>' + value.GiaMua3 + '</td>' + '<td>' + value.SoLuongMua3 + '</td>'
+                        tbl.append('<tr>' + '<td style="background-color: #da5a4c; color: white;">' + value.MaCP + '</td>' + '<td>' + value.GiaMua3 + '</td>' + '<td>' + value.SoLuongMua3 + '</td>'
                             + '<td>' + value.GiaMua2 + '</td>' + '<td>' + value.SoLuongMua2 + '</td>'
                             + '<td>' + value.GiaMua1 + '</td>' + '<td>' + value.SoLuongMua1 + '</td>'
-                            + '<td>' + value.GiaKhop + '</td>' + '<td>' + value.SoLuongKhop + '</td>'
+                            + '<td style="background-color: #f3ead2;">' + value.GiaKhop + '</td>' + '<td style="background-color: #f3ead2;">' + value.SoLuongKhop + '</td>'
                             + '<td>' + value.GiaBan1 + '</td>' + '<td>' + value.SoLuongBan1 + '</td>'
                             + '<td>' + value.GiaBan2 + '</td>' + '<td>' + value.SoLuongBan2 + '</td>'
                             + '<td>' + value.GiaBan3 + '</td>' + '<td>' + value.SoLuongBan3 + '</td>'
-                            + '<td>' + value.TongSo + '</td>'
+                            + '<td style="background-color: #a8d681;">' + value.TongSo + '</td>'
                             + '</tr>');
                        
                     });
@@ -71,27 +71,35 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div>
-                            <table class="table table-striped">
-                                <thead>
+                        <div class="table-bordered table-responsive text-center">
+                            <table class="table table-bordered">
+                                <thead >
                                     <tr>
-                                        <th>Mã Cổ Phiếu</th>
-                                        <th>Giá Mua 3</th>
-                                        <th>Số Lượng Mua 3</th>
-                                        <th>Giá Mua 2</th>
-                                        <th>Số Lượng Mua 2</th>
-                                        <th>Giá Mua 1</th>
-                                        <th>Số Lượng Mua 1</th>
-                                        <th>Giá Khớp</th>
-                                        <th>Số Lượng Khớp</th>
-                                        <th>Giá Bán 1</th>
-                                        <th>Số Lượng Bán 1</th>
-                                        <th>Giá Bán 2</th>
-                                        <th>Số Lượng Bán 2</th>
-                                        <th>Giá Bán 3</th>
-                                        <th>Số Lượng Bán 3</th>
-                                        <th>Tổng số</th>
+                                        <th rowspan="2" style="text-align: center; vertical-align: inherit; background-color: #c13525; color: white;">Mã Cổ Phiếu</th>
+                                        <th colspan="6" style="text-align: center; background-color: #ff8652; color: white;">Bên mua</th>
+                                        <th colspan="2" style="text-align: center; background-color: #ffbb43; color: white;">Khớp lệnh</th>
+                                        <th colspan="6" style="text-align: center; background-color: #b6e9d1; color: white;">Bên bán</th>
+                                        <th rowspan="2" style="text-align: center; vertical-align: inherit; background-color: #6da06f; color: white;">Tổng số</th>
                                     </tr>
+                                    <tr>
+                                        
+                                        <th style="background-color: whitesmoke;">Giá Mua 3</th>
+                                        <th style="background-color: whitesmoke;">Số Lượng Mua 3</th>
+                                        <th style="background-color: whitesmoke;">Giá Mua 2</th>
+                                        <th style="background-color: whitesmoke;">Số Lượng Mua 2</th>
+                                        <th style="background-color: whitesmoke;">Giá Mua 1</th>
+                                        <th style="background-color: whitesmoke;">Số Lượng Mua 1</th>
+                                        <th style="background-color: #e3d7b9;">Giá Khớp</th>
+                                        <th style="background-color: #e3d7b9; ">Số Lượng Khớp</th>
+                                        <th style="background-color: whitesmoke;">Giá Bán 1</th>
+                                        <th style="background-color: whitesmoke;">Số Lượng Bán 1</th>
+                                        <th style="background-color: whitesmoke;">Giá Bán 2</th>
+                                        <th style="background-color: whitesmoke;">Số Lượng Bán 2</th>
+                                        <th style="background-color: whitesmoke;">Giá Bán 3</th>
+                                        <th style="background-color: whitesmoke;">Số Lượng Bán 3</th>
+                                        
+                                    </tr>
+
                                 </thead>
                                 <tbody id="messagesTable"></tbody>
                             </table>
